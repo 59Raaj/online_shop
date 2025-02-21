@@ -1,3 +1,4 @@
+
 # Use Docker Compose version 3.8
 version: '3.8'
 
@@ -31,3 +32,26 @@ services:
 
     # Override the default command and run the app in development mode
     command: ["npm", "run", "dev"]
+=======
+version: '3.8'
+
+services:
+  app:
+    container_name: online_shop_container
+    image: online_shop
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
