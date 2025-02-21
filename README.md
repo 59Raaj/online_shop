@@ -1,4 +1,3 @@
-
 🚀 Online Shop App Documentation
 This guide will walk you through setting up, building, and deploying the Online Shop App using Docker and Docker Compose. Whether you're running it locally or deploying it in a production environment, this documentation has got you covered!
 
